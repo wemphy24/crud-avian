@@ -18,6 +18,7 @@ class TableB extends Model
     protected $casts = [
         'nominal_transaksi' => 'decimal:2',
     ];
+    public $timestamps = false;
 
     // relasi ke table_a, cek kode baru dulu, kalau tidak ada cek kode lama
     public function toko(): ?TableA

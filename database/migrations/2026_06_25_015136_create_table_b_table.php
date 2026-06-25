@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('table_b', function (Blueprint $table) {
             $table->unsignedBigInteger('kode_toko');
             $table->decimal('nominal_transaksi', 8, 2);
-
-             $table->timestamps();
         });
     }
 

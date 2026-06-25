@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('table_d', function (Blueprint $table) {
             $table->string('kode_sales');
             $table->string('nama_sales', 20);
-            
-             $table->timestamps();
         });
     }
 

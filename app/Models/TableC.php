@@ -15,6 +15,7 @@ class TableC extends Model
         'kode_toko',
         'area_sales',
     ];
+    public $timestamps = false;
 
     // relasi ke table_a 
     public function toko(): BelongsTo

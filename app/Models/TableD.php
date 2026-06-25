@@ -18,6 +18,7 @@ class TableD extends Model
         'kode_sales',
         'nama_sales',
     ];
+    public $timestamps = false;
 
     // untuk ambil prefix area dari kode_sales
     public function getPrefixAreaAttribute(): string

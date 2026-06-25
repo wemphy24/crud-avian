@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('table_a', function (Blueprint $table) {
             $table->unsignedBigInteger('kode_toko_baru');
             $table->integer('kode_toko_lama')->nullable();
-
-            $table->timestamps();
         });
     }
 

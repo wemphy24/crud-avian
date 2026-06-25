@@ -20,6 +20,7 @@ class TableA extends Model
         'kode_toko_baru',
         'kode_toko_lama',
     ];
+    public $timestamps = false;
 
     // relasi ke table_c (langsung, kode baru)
     public function area(): HasOne

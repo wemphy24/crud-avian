@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('table_c', function (Blueprint $table) {
             $table->unsignedBigInteger('kode_toko');
             $table->string('area_sales', 10);
-
-             $table->timestamps();
         });
     }
 
