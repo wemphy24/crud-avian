@@ -12,11 +12,12 @@
                 Template Excel
             </a>
             <button onclick="document.getElementById('modalImport').classList.remove('hidden')"
-                class="inline-flex items-center justify-center text-sm px-3 py-2 rounded-lg border border-blue-300 text-blue-600 hover:bg-blue-50 transition">
+                class="inline-flex items-center justify-center gap-2 text-sm px-3 py-2 rounded-lg border border-blue-300 text-blue-600 hover:bg-blue-50 transition">
+                <x-heroicon-o-arrow-up class="size-4" />
                 Import Excel
             </button>
             <a href="{{ route('master-sales.create') }}"
-                class="inline-flex items-center justify-center text-sm px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">
+                class="inline-flex items-center justify-center text-sm px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-400 transition">
                 + Tambah Sales
             </a>
             <a href="{{ route('master-sales.export.pdf') }}"
@@ -43,13 +44,13 @@
                     @forelse($data as $row)
                         <tr class="hover:bg-gray-50 transition">
                             <td class="px-5 py-3">
-                                <span class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                                <span class="bg-orange-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-md">
                                     {{ $row['kode_sales'] }}
                                 </span>
                             </td>
                             <td class="px-5 py-3 font-medium text-gray-800">{{ $row['nama_sales'] }}</td>
                             <td class="px-5 py-3">
-                                <span class="bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-1 rounded-sm">
+                                <span class="bg-blue-100 text-xs font-medium px-3 py-1 rounded-md">
                                     Area {{ $row['area'] }}
                                 </span>
                             </td>

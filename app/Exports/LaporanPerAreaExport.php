@@ -58,7 +58,6 @@ class LaporanPerAreaExport implements
     public function styles(Worksheet $sheet): array
     {
         return [
-            // heading row bold
             1 => ['font' => ['bold' => true]],
         ];
     }

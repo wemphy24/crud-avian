@@ -7,19 +7,19 @@
     <div class="mb-5 flex items-center justify-between">
         <h1 class="text-xl font-semibold text-gray-800">Detail Sales</h1>
         <a href="{{ route('master-sales.index') }}"
-            class="text-sm px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 transition">
-            &larr; Kembali
+            class="bg-white text-blue-400 text-sm px-4 py-2 rounded-lg border border-blue-100 hover:bg-blue-100 transition">
+            Kembali
         </a>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-            <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">Info Sales</h2>
+        <div class="bg-white rounded-xl p-5 flex flex-col gap-4 border-2 border-dashed border-yellow-100">
+            <h2 class="text-xs font-semibold uppercase tracking-wide">Info Sales</h2>
             <dl class="space-y-3 text-sm">
                 <div class="flex justify-between">
                     <dt class="text-gray-500">Kode Sales</dt>
                     <dd>
-                        <span class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                        <span class="bg-orange-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-md">
                             {{ $sales->kode_sales }}
                         </span>
                     </dd>
@@ -31,7 +31,7 @@
                 <div class="flex justify-between">
                     <dt class="text-gray-500">Area</dt>
                     <dd>
-                        <span class="bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                        <span class="bg-blue-100 text-xs font-medium px-3 py-1 rounded-md">
                             Area {{ $sales->prefix_area }}
                         </span>
                     </dd>
@@ -56,8 +56,8 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-            <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">
+        <div class="bg-white rounded-xl p-5 flex flex-col gap-4 border-2 border-dashed border-green-100">
+            <h2 class="text-xs font-semibold uppercase tracking-wide">
                 Toko di Area {{ $sales->prefix_area }}
             </h2>
 
@@ -75,7 +75,7 @@
                             </div>
                             <a href="{{ route('master-toko.show', $t->kode_toko_baru) }}"
                                 class="text-xs text-sky-500 hover:text-sky-700 transition">
-                                Lihat &rarr;
+                                Lihat
                             </a>
                         </li>
                     @endforeach
@@ -83,8 +83,8 @@
             @endif
         </div>
 
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-            <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">
+        <div class="bg-white rounded-xl p-5 flex flex-col gap-4 border-2 border-dashed border-blue-100">
+            <h2 class="text-xs font-semibold uppercase tracking-wide">
                 Area yang Ditangani
             </h2>
 
@@ -95,7 +95,7 @@
                     @foreach ($area as $a)
                         <li class="flex items-center justify-between text-sm py-1.5 border-b border-gray-50 last:border-0">
                             <div class="flex items-center gap-2">
-                                <span class="bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                                <span class="bg-blue-100 text-xs font-medium px-3 py-1 rounded-md">
                                     Area {{ $a->area_sales }}
                                 </span>
                             </div>
@@ -124,7 +124,7 @@
                         @foreach ($rekanSales as $rekan)
                             <li class="flex items-center justify-between text-sm">
                                 <span class="text-gray-700">{{ $rekan->nama_sales }}</span>
-                                <span class="bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded-full">
+                                <span class="bg-orange-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-md">
                                     {{ $rekan->kode_sales }}
                                 </span>
                             </li>

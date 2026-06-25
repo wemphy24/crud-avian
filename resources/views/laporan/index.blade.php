@@ -9,15 +9,18 @@
 
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
             <a href="{{ route('laporan.export.area') }}"
-                class="inline-flex items-center justify-center text-sm px-3 py-2 rounded-lg border border-green-300 text-green-700 hover:bg-green-50 transition">
-                Export per Area
+                class="inline-flex items-center justify-center gap-2 text-sm px-3 py-2 rounded-lg border border-green-300 text-green-700 hover:bg-green-50 transition">
+                <x-heroicon-o-arrow-down class="size-4" />
+                Export Area
             </a>
             <a href="{{ route('laporan.export.sales') }}"
-                class="inline-flex items-center justify-center text-sm px-3 py-2 rounded-lg border border-green-300 text-green-700 hover:bg-green-50 transition">
-                Export per Sales
+                class="inline-flex items-center justify-center gap-2 text-sm px-3 py-2 rounded-lg border border-green-300 text-green-700 hover:bg-green-50 transition">
+                <x-heroicon-o-arrow-down class="size-4" />
+                Export Sales
             </a>
             <a href="{{ route('laporan.export.semua') }}"
-                class="inline-flex items-center justify-center text-sm px-4 py-2 rounded-lg bg-green-600 text-white hover:bg-green-700 transition">
+                class="inline-flex items-center justify-center gap-2 text-sm px-4 py-2 rounded-lg bg-green-500 text-white hover:bg-green-400 transition">
+
                 Export Semua
             </a>
 
@@ -30,7 +33,7 @@
 
     <div class="space-y-6">
 
-        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <div class="bg-white rounded-xl border border-green-200 overflow-hidden">
             <div class="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
                 <h2 class="text-sm font-semibold text-gray-700">Rekapitulasi per Area</h2>
                 <a href="{{ route('laporan.export.area') }}" class="text-xs text-green-600 hover:text-green-800 transition">
@@ -51,7 +54,7 @@
                         @forelse($perArea as $row)
                             <tr class="hover:bg-gray-50 transition">
                                 <td class="px-5 py-3">
-                                    <span class="bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-sm">
+                                    <span class="bg-blue-100 text-xs font-semibold px-3 py-1 rounded-md">
                                         Area {{ $row['area'] }}
                                     </span>
                                 </td>
@@ -59,7 +62,7 @@
                                 <td class="px-5 py-3">
                                     <div class="flex flex-wrap gap-1">
                                         @foreach ($row['sales'] as $s)
-                                            <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded-sm">
+                                            <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-md">
                                                 {{ $s }}
                                             </span>
                                         @endforeach
@@ -89,7 +92,7 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <div class="bg-white rounded-xl border border-green-200 overflow-hidden">
             <div class="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
                 <h2 class="text-sm font-semibold text-gray-700">Rekapitulasi per Sales</h2>
                 <a href="{{ route('laporan.export.sales') }}"
@@ -118,7 +121,7 @@
                                 </td>
                                 <td class="px-5 py-3 font-medium text-gray-800">{{ $row['nama_sales'] }}</td>
                                 <td class="px-5 py-3">
-                                    <span class="bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-1 rounded-sm">
+                                    <span class="bg-blue-100 text-xs font-medium px-3 py-1 rounded-md">
                                         Area {{ $row['area'] }}
                                     </span>
                                 </td>

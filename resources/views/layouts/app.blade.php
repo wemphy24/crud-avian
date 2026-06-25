@@ -40,7 +40,7 @@
             </div>
 
             {{-- Main Content --}}
-            <div class="col-span-6 xl:col-span-5 p-6">
+            <div class="col-span-6 xl:col-span-5 p-6 bg-gray-50">
                 <div class="max-w-7xl mx-auto py-6">
 
                     {{-- Kalau sukses --}}

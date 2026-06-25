@@ -10,7 +10,7 @@
             <p class="text-sm text-gray-400 mt-1">Hanya nominal transaksi yang dapat diubah.</p>
         </div>
 
-        <div class="bg-white rounded-xl border border-gray-200 p-6">
+        <div class="bg-white rounded-xl border border-dashed border-yellow-500 p-6">
             <form action="{{ route('transaksi.update', $transaksi->kode_toko) }}" method="POST" class="space-y-5">
                 @csrf
                 @method('PUT')
@@ -28,7 +28,7 @@
                 @php $toko = $transaksi->toko(); @endphp
                 @if ($toko)
                     <div class="rounded-lg bg-gray-50 border border-gray-200 px-4 py-3 text-sm">
-                        <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Info Toko</p>
+                        <p class="text-xs font-semibold uppercase tracking-wide mb-2">Info Toko</p>
                         <div class="flex items-center justify-between">
                             <div class="space-y-1">
                                 <p class="text-gray-700">
@@ -41,7 +41,7 @@
                                     </p>
                                 @endif
                             </div>
-                            <span class="bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                            <span class="bg-blue-100 text-xs font-medium px-3 py-1 rounded-md">
                                 Area {{ $toko->area_sales }}
                             </span>
                         </div>

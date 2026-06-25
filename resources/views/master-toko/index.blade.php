@@ -12,11 +12,12 @@
                 Template Excel
             </a>
             <button onclick="document.getElementById('modalImport').classList.remove('hidden')"
-                class="inline-flex items-center justify-center text-sm px-3 py-2 rounded-lg border border-blue-300 text-blue-600 hover:bg-blue-50 transition">
+                class="inline-flex items-center justify-center gap-2 text-sm px-3 py-2 rounded-lg border border-blue-300 text-blue-600 hover:bg-blue-50 transition">
+                <x-heroicon-o-arrow-up class="size-4" />
                 Import Excel
             </button>
             <a href="{{ route('master-toko.create') }}"
-                class="inline-flex items-center justify-center text-sm px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition">
+                class="inline-flex items-center justify-center text-sm px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-400 transition">
                 + Tambah Toko
             </a>
             <a href="{{ route('master-toko.export.pdf') }}"
@@ -45,7 +46,7 @@
                             <td class="px-5 py-3 font-medium text-gray-800">{{ $row['kode_toko_baru'] }}</td>
                             <td class="px-5 py-3 text-gray-500">{{ $row['kode_toko_lama'] ?? '-' }}</td>
                             <td class="px-5 py-3">
-                                <span class="bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-1 rounded-sm">
+                                <span class="bg-blue-100 text-xs font-medium px-3 py-1 rounded-md">
                                     Area {{ $row['area_sales'] ?? '-' }}
                                 </span>
                             </td>

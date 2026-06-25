@@ -10,7 +10,7 @@
             <p class="text-sm text-gray-400 mt-1">Kode sales tidak dapat diubah karena menjadi acuan area.</p>
         </div>
 
-        <div class="bg-white rounded-xl border border-gray-200 p-6">
+        <div class="bg-white rounded-xl border border-dashed border-yellow-500 p-6">
             <form action="{{ route('master-sales.update', $sales->kode_sales) }}" method="POST" class="space-y-5">
                 @csrf
                 @method('PUT')

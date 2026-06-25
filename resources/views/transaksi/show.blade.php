@@ -13,19 +13,19 @@
                 Edit
             </a>
             <a href="{{ route('transaksi.index') }}"
-                class="text-sm px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 transition">
-                &larr; Kembali
+                class="bg-white text-blue-400 text-sm px-4 py-2 rounded-lg border border-blue-100 hover:bg-blue-100 transition">
+                Kembali
             </a>
         </div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-            <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">
+        <div class="bg-white rounded-xl p-5 flex flex-col gap-4 border-2 border-dashed border-red-100">
+            <h2 class="text-xs font-semibold uppercase tracking-wide">
                 Info Transaksi
             </h2>
-            <dl class="space-y-3 text-sm">
+            <dl class="space-y-2 text-sm">
                 <div class="flex justify-between">
                     <dt class="text-gray-500">Kode Toko</dt>
                     <dd class="font-medium text-gray-800">{{ $transaksi->kode_toko }}</dd>
@@ -40,7 +40,7 @@
                     <dt class="text-gray-500">Area</dt>
                     <dd>
                         @if ($transaksi->area_sales)
-                            <span class="bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                            <span class="bg-blue-100 text-xs font-medium px-3 py-1 rounded-md">
                                 Area {{ $transaksi->area_sales }}
                             </span>
                         @else
@@ -63,13 +63,13 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-            <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">
+        <div class="bg-white rounded-xl p-5 flex flex-col gap-4 border-2 border-dashed border-blue-100">
+            <h2 class="text-xs font-semibold uppercase tracking-wide">
                 Info Toko
             </h2>
 
             @if ($toko)
-                <dl class="space-y-3 text-sm">
+                <dl class="space-y-2 text-sm">
                     <div class="flex justify-between">
                         <dt class="text-gray-500">Kode Baru</dt>
                         <dd class="font-medium text-gray-800">{{ $toko->kode_toko_baru }}</dd>
@@ -81,7 +81,7 @@
                     <div class="flex justify-between items-center">
                         <dt class="text-gray-500">Area</dt>
                         <dd>
-                            <span class="bg-blue-100 text-blue-700 text-xs font-medium px-2.5 py-1 rounded-full">
+                            <span class="bg-blue-100 text-xs font-medium px-3 py-1 rounded-md">
                                 Area {{ $toko->area_sales }}
                             </span>
                         </dd>
@@ -99,8 +99,8 @@
             @endif
         </div>
 
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-            <h2 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">
+        <div class="bg-white rounded-xl p-5 flex flex-col gap-4 border-2 border-dashed border-gray-100">
+            <h2 class="text-xs font-semibold uppercase tracking-wide">
                 Sales yang Menangani
             </h2>
 
@@ -112,12 +112,12 @@
                         <li class="flex items-center justify-between text-sm py-1.5 border-b border-gray-50 last:border-0">
                             <span class="font-medium text-gray-800">{{ $s->nama_sales }}</span>
                             <div class="flex items-center gap-2">
-                                <span class="bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded-full">
+                                <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-md">
                                     {{ $s->kode_sales }}
                                 </span>
                                 <a href="{{ route('master-sales.show', $s->kode_sales) }}"
                                     class="text-xs text-sky-500 hover:text-sky-700 transition">
-                                    Lihat &rarr;
+                                    Lihat
                                 </a>
                             </div>
                         </li>
